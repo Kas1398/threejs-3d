@@ -110,12 +110,111 @@ html {
   gap: 1rem;
 }
 
+.aipicker-textarea {
+  width: 100%;
+  background-color: transparent;
+  font-size: 0.875rem;
+  border-width: 1px;
+  border-color: #e5e7eb;
+  padding: 0.5rem;
+  outline: none;
+  flex: 1;
+}
+
 .aipicker-container {
   position: absolute;
-  left: 100%;
-  margin-left: 0.75rem;
+  left: 0;
+  margin-left: 1rem;
+  padding: 0.75rem;
+  width: 195px;
+  height: 220px;
+  border-radius: 0.375rem;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+
+.aipicker-textarea {
+  width: 100%;
+  background-color: transparent;
+  font-size: .875rem;
+  border-width: 1px;
+  border-color: gray-300;
+  padding: .5rem;
+  outline: none;
+  flex: 1;
+}
+
+.filepicker-container {
+  position: absolute;
+  left: calc(100% + 1rem);
+  margin-left: .75rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.filepicker-label {
+  border: 1px solid #d1d5db;
+  padding-top: 0.375rem;
+  padding-bottom: 0.375rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  border-radius: 0.375rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  font-size: 0.75rem;
+  color: #374151;
+  outline: none;
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.filepicker-label:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
+}
+
+
+.tab-btn {
+  width: 3.5rem;
+  height: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.glassmorphism {
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 2px 30px 0 rgba(31, 38, 135, 0.07);
   backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
 
+input[type="file"] {
+  z-index: -1;
+  position: absolute;
+  opacity: 0;
+}
+
+.sketch-picker {
+  width: 170px !important;
+  background: rgba(255, 255, 255, 0.25) !important;
+  box-shadow: 0 2px 30px 0 rgba(31, 38, 135, 0.07) !important;
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.18) !important;
+  border-radius: 6px !important;
+}
+
+.sketch-picker>div:nth-child(3) {
+  display: none !important;
 }
