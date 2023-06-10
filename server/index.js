@@ -7,7 +7,9 @@ import dalleRoutes from './routes/dalle.routes.js';
 dotenv.config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+    origin: 'https://customize-3d-tshirt-bykassahun.vercel.app',
+}));
 app.use(express.json({ limig: '50mb' }));
 
 app.use('/api/v1/dalle', dalleRoutes);
